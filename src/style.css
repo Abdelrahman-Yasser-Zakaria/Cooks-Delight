@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #f9f7f0;
+  --color-brand-orange: #f2a94a;
+  --color-brand-dark: #262626;
+  --color-brand-red: #e76f51;
+  --color-brand-blue: #d0e7f9;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-dark;
+    background-color: #f9f7f0; /* Fallback */
+    overflow-x: hidden;
+  }
+}
+
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.15); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
