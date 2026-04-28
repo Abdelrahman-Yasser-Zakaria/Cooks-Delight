@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import loginImage from '../assets/images/login-image.png';
 import logo from '../assets/icons/Logo Nav Bar.svg';
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -10,6 +11,7 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [validationErrors, setValidationErrors] = useState({});
+  const navigate = useNavigate();
 
   const validate = () => {
     const errors = {};
@@ -40,6 +42,7 @@ const LoginPage = () => {
 
       console.log('Login successful:', response.data);
       alert(`Welcome ${response.data.firstName}!`);
+      navigate("/");
     } catch (err) {
       console.error('Login error:', err);
       setError(err.response?.data?.message || 'Invalid username or password');
