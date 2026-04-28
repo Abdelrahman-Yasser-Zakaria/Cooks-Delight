@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const FeaturedRecipes = () => {
@@ -82,20 +83,24 @@ const FeaturedRecipes = () => {
             </div>
 
             {/* Content */}
-            <div className="p-8 flex flex-col flex-grow">
-              <h3 className="text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-orange transition-colors font-semibold font-weight: 600">
+            <div className="p-8 text-left text-brand-dark flex flex-col flex-grow bg-white">
+              <h3 className="text-2xl font-black mb-4 group-hover:text-brand-red transition-colors leading-tight font-semibold font-weight: 600">
                 {recipe.name}
               </h3>
-              <p className="text-gray-500 font-semibold font-weight: 600 text-sm line-clamp-2 mb-8 leading-relaxed">
-                {recipe.instructions?.[0] || `A delicious ${recipe.cuisine} ${recipe.name} recipe.`}
+              <p className="text-brand-dark/60 text-sm line-clamp-2 mb-8 font-medium font-semibold font-weight: 600">
+                {recipe.instructions?.[0] || `A delicious ${recipe.cuisine} dish.`}
               </p>
 
               <div className="mt-auto flex items-center justify-between">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-black font-semibold font-weight: 600 text-brand-dark uppercase tracking-widest bg-gray-50 px-2 py-1 rounded w-fit">
-                    {recipe.prepTimeMinutes + recipe.cookTimeMinutes} MIN - {recipe.difficulty} PREP - {recipe.servings} SERVES
-                  </span>
-                </div>
+                <span className="text-[9px] font-black uppercase tracking-widest text-brand-dark/50">
+                  {recipe.prepTimeMinutes + recipe.cookTimeMinutes} MIN - {recipe.difficulty} PREP
+                </span>
+                <Link
+                  to={`/recipe/${recipe.id}`}
+                  className="bg-brand-red text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full hover:bg-[#EE6352] transition-colors shadow-sm"
+                >
+                  View Details
+                </Link>
               </div>
             </div>
           </div>

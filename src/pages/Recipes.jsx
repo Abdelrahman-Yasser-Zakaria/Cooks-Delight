@@ -19,17 +19,21 @@ const Recipes = () => {
     const fetchRecipes = async () => {
       setLoading(true);
       try {
-        let url = "https://dummyjson.com/recipes?limit=30";
+        let url = "https://dummyjson.com/recipes?limit=0";
         if (query) {
           url = `https://dummyjson.com/recipes/search?q=${query}`;
-        } else if (category && category !== "All") {
-          // DummyJSON category/tag fetch
-          url = `https://dummyjson.com/recipes/tag/${category}`;
         }
 
         const response = await axios.get(url);
-        // Tag response sometimes differs in structure
-        const data = response.data.recipes || [];
+        let data = response.data.recipes || [];
+
+        if (!query && category && category !== "All") {
+          data = data.filter(r => 
+            (r.mealType && r.mealType.some(m => m.toLowerCase() === category.toLowerCase())) ||
+            (r.tags && r.tags.some(t => t.toLowerCase() === category.toLowerCase()))
+          );
+        }
+
         setRecipes(data);
       } catch (error) {
         console.error("Error fetching recipes:", error);
@@ -90,17 +94,23 @@ const Recipes = () => {
 
                     {/* Content */}
                     <div className="p-8 text-left text-brand-dark flex flex-col flex-grow bg-white">
-                      <h3 className="text-2xl font-black mb-4 group-hover:text-brand-red transition-colors leading-tight">
+                      <h3 className="text-2xl font-black mb-4 group-hover:text-brand-red transition-colors leading-tight font-semibold font-weight: 600">
                         {recipe.name}
                       </h3>
-                      <p className="text-brand-dark/60 text-sm line-clamp-2 mb-8 font-medium">
+                      <p className="text-brand-dark/60 text-sm line-clamp-2 mb-8 font-medium font-semibold font-weight: 600">
                         {recipe.instructions?.[0] || `A delicious ${recipe.cuisine} dish.`}
                       </p>
 
                       <div className="mt-auto flex items-center justify-between">
                         <span className="text-[9px] font-black uppercase tracking-widest text-brand-dark/50">
-                          {recipe.prepTimeMinutes + recipe.cookTimeMinutes} MIN - {recipe.difficulty} PREP - {recipe.servings} SERVES
+                          {recipe.prepTimeMinutes + recipe.cookTimeMinutes} MIN - {recipe.difficulty} PREP
                         </span>
+                        <Link 
+                          to={`/recipe/${recipe.id}`}
+                          className="bg-brand-red text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full hover:bg-[#EE6352] transition-colors shadow-sm"
+                        >
+                          View Details
+                        </Link>
                       </div>
                     </div>
                   </div>

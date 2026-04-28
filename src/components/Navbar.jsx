@@ -118,7 +118,7 @@ const Navbar = () => {
               <div className="flex flex-col -space-y-1">
 
 
-                <div className="flex flex-col -space-y-1.5">font-semibold font-weight: 600
+                <div className="flex flex-col -space-y-1.5">
                   <img src={logo2} alt="CooksDelight Logo" className="h-10 w-auto" />
                 </div>
 
