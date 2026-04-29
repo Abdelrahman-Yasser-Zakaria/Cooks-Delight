@@ -24,7 +24,7 @@ const CTABanner = () => {
           <p className="text-white/90 text-base md:text-lg max-w-2xl mb-12 font-medium leading-relaxed">
             Create an account to save your favorite recipes, share your own dishes, and enjoy a personalized cooking experience.
           </p>
-          <Link to="/login" className="bg-brand-dark hover:bg-black text-white font-black px-12 py-4 rounded-full transition-all uppercase text-[12px] tracking-widest shadow-xl active:scale-95">
+          <Link to="/signup" className="bg-brand-dark hover:bg-black text-white font-black px-12 py-4 rounded-full transition-all uppercase text-[12px] tracking-widest shadow-xl active:scale-95">
             Sign Up
           </Link>
         </div>
