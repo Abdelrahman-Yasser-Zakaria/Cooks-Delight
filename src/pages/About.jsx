@@ -3,7 +3,15 @@ import FeaturedRecipes from "../components/FeaturedRecipes";
 import CTABanner from "../components/CTABanner";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import about from "../assets/images/about3.jpg";
+import about from "../assets/images/about3.png";
+import gallary1 from "../assets/images/gallary1.png";
+import gallary2 from "../assets/images/gallary2.png";
+import gallary3 from "../assets/images/gallary3.png";
+import gallary4 from "../assets/images/gallary4.png";
+import gallary5 from "../assets/images/gallary5.png";
+import gallary6 from "../assets/images/gallary6.png";
+import gallary7 from "../assets/images/gallary7.png";
+import gallary8 from "../assets/images/gallary8.png";
 
 const Facebook = ({ size = 24 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -27,16 +35,7 @@ const Youtube = ({ size = 24 }) => (
 );
 
 const About = () => {
-  const galleryImages = [
-    "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1564149504817-d1378368926f?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1517433670267-36bb338cdaa0?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&q=80&w=400",
-    "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&q=80&w=400",
-  ];
+  const galleryImages = [gallary1, gallary2, gallary3, gallary4, gallary5, gallary6, gallary7, gallary8];
 
   return (
     <div className="min-h-screen bg-brand-cream font-sans">
