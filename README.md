@@ -1,69 +1,84 @@
-# CooksDelight
+# CooksDelight 🍳
 
-Welcome to CooksDelight! This project is a modern web application built with React, Vite, and Tailwind CSS.
+CooksDelight is a modern, high-fidelity culinary platform designed to inspire and educate home cooks. It combines real-time recipe discovery with a rich, curated library of cooking techniques and dietary-focused advice.
 
-## Getting Started
+## 🌟 Key Features
 
-To get a local copy up and running, follow these simple steps.
+- **Recipe Discovery**: Browse a vast collection of recipes fetched from the DummyJSON API, with filtering by categories and search functionality.
+- **Featured Recipes**: An interactive carousel showcasing top-rated dishes.
+- **Culinary Wisdom (Tips Page)**:
+  - **Mastering the Basics**: Step-by-step guides on essential skills like knife handling and roasting.
+  - **Tips & Tricks**: Practical advice for everyday cooking, from herb usage to produce selection.
+  - **Nourishing Every Palate**: Specialized content for Gluten-Free, Plant-Based, and Allergy-Friendly diets.
+- **Interactive UI**: Fully responsive design with smooth animations, custom sliders, and high-quality visual overlays.
+- **Authentication**: Modern login and signup interfaces (Frontend-ready).
+
+## 📂 Directory Structure
+
+```text
+CooksDelight/
+├── API-docs/               # Documentation for API integrations
+├── Design/                 # UI/UX Design assets and screenshots
+├── public/                 # Static assets (favicons, svgs)
+├── src/
+│   ├── assets/             # Images and Icons
+│   ├── components/         # Reusable UI components
+│   │   ├── TipCard.jsx     # Shared layout for technique cards
+│   │   ├── NourishingCard.jsx # Specialized overlay cards
+│   │   └── ...             # Feature-specific components
+│   ├── data/               # Local data files (tipsData.js)
+│   ├── pages/              # Main view components (Home, Tips, etc.)
+│   ├── App.jsx             # Main router and app shell
+│   ├── main.jsx            # Entry point
+│   └── style.css           # Tailwind & Global styles
+├── index.html              # HTML template
+├── package.json            # Dependencies and scripts
+└── vite.config.js          # Build tool configuration
+```
+
+## 🛠️ Technologies Used
+
+- **Framework**: [React 19](https://reactjs.org/)
+- **Build Tool**: [Vite 8](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **HTTP Client**: [Axios 1](https://axios-http.com/)
+- **Icons**: [Heroicons 2](https://heroicons.com/)
+- **Font**: Inter (Sans-serif)
+
+## 🚀 Getting Started
+
+Follow these steps to get the project running locally on your machine.
 
 ### Prerequisites
 
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine. This project recommends using the latest LTS version.
+- **Node.js**: Ensure you have Node.js (v18 or higher) installed.
+- **npm**: Usually comes with Node.js.
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Abdelrahman-Yasser-Zakaria/Cooks-Delight.git
-    cd Cooks-Delight
-    ```
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd CooksDelight
+   ```
 
-2.  **Install NPM packages:**
-    ```bash
-    npm install
-    ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-## Development
+3. **Run in Development Mode**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:5173`.
 
-To start the local development server:
+4. **Build for Production**
+   ```bash
+   npm run build
+   ```
 
-```bash
-npm run dev
-```
+## 📄 License
 
-The application will be available at `http://localhost:5173`.
-
-### Other Scripts
-
-- `npm run build`: Build the project for production.
-- `npm run lint`: Run ESLint to check for code quality issues.
-- `npm run preview`: Preview the production build locally.
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-### How to Contribute
-
-1.  **Create a branch for your feature or bug fix:**
-    ```bash
-    git checkout -b feature/AmazingFeature
-    ```
-
-2.  **Make your changes and commit them:**
-    ```bash
-    git add .
-    git commit -m 'Add some AmazingFeature'
-    ```
-
-3.  **Push your branch to the remote repository:**
-    ```bash
-    git push origin feature/AmazingFeature
-    ```
-
-4.  **Open a Pull Request:**
-    - Navigate to the repository on GitHub.
-    - Click on the "Pull Requests" tab.
-    - Click the "New pull request" button.
-    - Select your branch from the "compare" dropdown and click "Create pull request".
-    - Provide a descriptive title and details about your changes.
+This project is part of the GIG Front-End Course. All rights reserved.
