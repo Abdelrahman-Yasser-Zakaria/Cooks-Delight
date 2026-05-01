@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginImage from '../assets/images/login-image.png';
 import logo from '../assets/icons/Logo Nav Bar.svg';
 
@@ -10,6 +10,7 @@ const SignupPage = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [validationErrors, setValidationErrors] = useState({});
+  const navigate = useNavigate();
 
   const validate = () => {
     const errors = {};
@@ -41,6 +42,7 @@ const SignupPage = () => {
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       alert(`Account created successfully for ${username}!`);
+      navigate("/");
     } catch (err) {
       console.error('Signup error:', err);
       setError('An error occurred during sign up. Please try again.');

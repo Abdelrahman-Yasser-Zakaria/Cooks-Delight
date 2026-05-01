@@ -56,7 +56,9 @@ const LoginPage = () => {
       {/* Header (Logo) */}
       <header className="p-6 md:px-12">
         <div className="flex justify-between items-center">
-          <img src={logo} alt="CooksDelight Logo" className="h-10 w-auto" />
+          <Link to="/">
+            <img src={logo} alt="CooksDelight Logo" className="h-10 w-auto" />
+          </Link>
           <div className="md:hidden">
             {/* Hamburger Menu icon for mobile as seen in design */}
             <button className="p-2 bg-gray-200 rounded-full">

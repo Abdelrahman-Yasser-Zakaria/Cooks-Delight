@@ -11,14 +11,13 @@ CooksDelight is a modern, high-fidelity culinary platform designed to inspire an
   - **Tips & Tricks**: Practical advice for everyday cooking, from herb usage to produce selection.
   - **Nourishing Every Palate**: Specialized content for Gluten-Free, Plant-Based, and Allergy-Friendly diets.
 - **Interactive UI**: Fully responsive design with smooth animations, custom sliders, and high-quality visual overlays.
-- **Authentication**: Modern login and signup interfaces (Frontend-ready).
+- **Authentication**: Modern login and signup interfaces.
 
 ## 📂 Directory Structure
 
 ```text
 CooksDelight/
 ├── API-docs/               # Documentation for API integrations
-├── Design/                 # UI/UX Design assets and screenshots
 ├── public/                 # Static assets (favicons, svgs)
 ├── src/
 │   ├── assets/             # Images and Icons
@@ -59,8 +58,8 @@ Follow these steps to get the project running locally on your machine.
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
-   cd CooksDelight
+   git clone https://github.com/Abdelrahman-Yasser-Zakaria/Cooks-Delight.git
+   cd Cooks-Delight
    ```
 
 2. **Install Dependencies**
@@ -78,7 +77,3 @@ Follow these steps to get the project running locally on your machine.
    ```bash
    npm run build
    ```
-
-## 📄 License
-
-This project is part of the GIG Front-End Course. All rights reserved.
