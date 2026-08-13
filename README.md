@@ -1,4 +1,6 @@
-# CooksDelight 🍳
+# CooksDelight
+
+![Home Page Screenshot](/images/homePage-screenshot.png)
 
 CooksDelight is a modern, high-fidelity culinary platform designed to inspire and educate home cooks. It combines real-time recipe discovery with a rich, curated library of cooking techniques and dietary-focused advice.
 
